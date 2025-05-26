@@ -2,33 +2,23 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
-
-// Initialize express app
 const app = express();
-
-// Middleware
 app.use(express.json());
-
-// Data file path
 const dataPath = path.join(__dirname, 'data', 'books.json');
 
 // Ensure data directory exists
 if (!fs.existsSync(path.join(__dirname, 'data'))) {
   fs.mkdirSync(path.join(__dirname, 'data'));
 }
-
-// Initialize books.json if it doesn't exist
 if (!fs.existsSync(dataPath)) {
   fs.writeFileSync(dataPath, JSON.stringify([]), 'utf8');
 }
 
-// Helper function to read books data
 const getBooksData = () => {
   const jsonData = fs.readFileSync(dataPath, 'utf8');
   return JSON.parse(jsonData);
 };
 
-// Helper function to write books data
 const saveBooksData = (data) => {
   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2), 'utf8');
 };
@@ -43,7 +33,7 @@ app.get('/books', (req, res) => {
   }
 });
 
-// POST /books - Create a new book
+// POST /books Create a new book
 app.post('/books', (req, res) => {
   try {
     const { title, author, price, publishedDate } = req.body;
@@ -72,23 +62,8 @@ app.post('/books', (req, res) => {
   }
 });
 
-// GET /books/:id - Get a specific book
-app.get('/books/:id', (req, res) => {
-  try {
-    const books = getBooksData();
-    const book = books.find(b => b.id === req.params.id);
-    
-    if (!book) {
-      return res.status(404).json({ message: 'Book not found' });
-    }
-    
-    res.json(book);
-  } catch (error) {
-    res.status(500).json({ message: 'Error retrieving book', error: error.message });
-  }
-});
 
-// PUT /books/:id - Update a book
+// PUT /books/:id 
 app.put('/books/:id', (req, res) => {
   try {
     const { title, author, price, publishedDate } = req.body;
@@ -99,8 +74,6 @@ app.put('/books/:id', (req, res) => {
     if (index === -1) {
       return res.status(404).json({ message: 'Book not found' });
     }
-    
-    // Update book properties
     books[index] = {
       ...books[index],
       title: title || books[index].title,
@@ -108,16 +81,14 @@ app.put('/books/:id', (req, res) => {
       price: price || books[index].price,
       publishedDate: publishedDate || books[index].publishedDate
     };
-    
     saveBooksData(books);
-    
     res.json(books[index]);
   } catch (error) {
     res.status(500).json({ message: 'Error updating book', error: error.message });
   }
 });
 
-// DELETE /books/:id - Delete a book
+// DELETE /books/:id Delete a book
 app.delete('/books/:id', (req, res) => {
   try {
     const books = getBooksData();
