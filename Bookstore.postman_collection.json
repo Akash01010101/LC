@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "3bed02ff-30d2-48e5-a793-d0482adf0c5f",
+		"name": "Bookstore",
+		"description": "A REST API for managing books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45327964",
+		"_collection_link": "https://akash-9945432.postman.co/workspace/Akash's-Workspace~b4641c94-a479-4fa5-8c33-328be2fb17eb/collection/45327964-3bed02ff-30d2-48e5-a793-d0482adf0c5f?action=share&source=collection_link&creator=45327964"
+	},
+	"item": [
+		{
+			"name": "Get books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2870"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b36-ZGkua1GWeiLwXT5aCJlhRNEJdUs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 13:35:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p\",\n        \"title\": \"To Kill a Mockingbird\",\n        \"author\": \"Harper Lee\",\n        \"price\": 12.99,\n        \"publishedDate\": \"1960-07-11\"\n    },\n    {\n        \"id\": \"2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q\",\n        \"title\": \"1984\",\n        \"author\": \"George Orwell\",\n        \"price\": 10.99,\n        \"publishedDate\": \"1949-06-08\"\n    },\n    {\n        \"id\": \"3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r\",\n        \"title\": \"The Great Gatsby\",\n        \"author\": \"F. Scott Fitzgerald\",\n        \"price\": 9.99,\n        \"publishedDate\": \"1925-04-10\"\n    },\n    {\n        \"id\": \"4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s\",\n        \"title\": \"Pride and Prejudice\",\n        \"author\": \"Jane Austen\",\n        \"price\": 8.99,\n        \"publishedDate\": \"1813-01-28\"\n    },\n    {\n        \"id\": \"5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t\",\n        \"title\": \"The Hobbit\",\n        \"author\": \"J.R.R. Tolkien\",\n        \"price\": 14.99,\n        \"publishedDate\": \"1937-09-21\"\n    },\n    {\n        \"id\": \"6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u\",\n        \"title\": \"Harry Potter and the Philosopher's Stone\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": 15.99,\n        \"publishedDate\": \"1997-06-26\"\n    },\n    {\n        \"id\": \"7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v\",\n        \"title\": \"The Catcher in the Rye\",\n        \"author\": \"J.D. Salinger\",\n        \"price\": 11.99,\n        \"publishedDate\": \"1951-07-16\"\n    },\n    {\n        \"id\": \"8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w\",\n        \"title\": \"The Lord of the Rings\",\n        \"author\": \"J.R.R. Tolkien\",\n        \"price\": 29.99,\n        \"publishedDate\": \"1954-07-29\"\n    },\n    {\n        \"id\": \"9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"price\": 12.49,\n        \"publishedDate\": \"1932-06-01\"\n    },\n    {\n        \"id\": \"0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y\",\n        \"title\": \"The Alchemist\",\n        \"author\": \"Paulo Coelho\",\n        \"price\": 13.99,\n        \"publishedDate\": \"1988-06-01\"\n    },\n    {\n        \"id\": \"1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z\",\n        \"title\": \"Moby-Dick\",\n        \"author\": \"Herman Melville\",\n        \"price\": 10.49,\n        \"publishedDate\": \"1851-10-18\"\n    },\n    {\n        \"id\": \"2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a\",\n        \"title\": \"The Odyssey\",\n        \"author\": \"Homer\",\n        \"price\": 8.99,\n        \"publishedDate\": \"1614-01-01\"\n    },\n    {\n        \"id\": \"3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b\",\n        \"title\": \"Crime and Punishment\",\n        \"author\": \"Fyodor Dostoevsky\",\n        \"price\": 11.99,\n        \"publishedDate\": \"1866-01-01\"\n    },\n    {\n        \"id\": \"4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c\",\n        \"title\": \"One Hundred Years of Solitude\",\n        \"author\": \"Gabriel García Márquez\",\n        \"price\": 14.49,\n        \"publishedDate\": \"1967-05-30\"\n    },\n    {\n        \"id\": \"5o6p7q8r-9s0t-1u2v-3w4x-5y6z7a8b9c0d\",\n        \"title\": \"The Divine Comedy\",\n        \"author\": \"Dante Alighieri\",\n        \"price\": 12.99,\n        \"publishedDate\": \"1320-01-01\"\n    },\n    {\n        \"id\": \"6p7q8r9s-0t1u-2v3w-4x5y-6z7a8b9c0d1e\",\n        \"title\": \"Don Quixote\",\n        \"author\": \"Miguel de Cervantes\",\n        \"price\": 13.99,\n        \"publishedDate\": \"1605-01-01\"\n    },\n    {\n        \"id\": \"7q8r9s0t-1u2v-3w4x-5y6z-7a8b9c0d1e2f\",\n        \"title\": \"The Brothers Karamazov\",\n        \"author\": \"Fyodor Dostoevsky\",\n        \"price\": 15.99,\n        \"publishedDate\": \"1880-01-01\"\n    },\n    {\n        \"id\": \"8r9s0t1u-2v3w-4x5y-6z7a-8b9c0d1e2f3g\",\n        \"title\": \"War and Peace\",\n        \"author\": \"Leo Tolstoy\",\n        \"price\": 18.99,\n        \"publishedDate\": \"1869-01-01\"\n    },\n    {\n        \"id\": \"9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h\",\n        \"title\": \"The Grapes of Wrath\",\n        \"author\": \"John Steinbeck\",\n        \"price\": 12.99,\n        \"publishedDate\": \"1939-04-14\"\n    },\n    {\n        \"id\": \"0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i\",\n        \"title\": \"A new modified book\",\n        \"author\": \"Akash T Jha\",\n        \"price\": 1990.99,\n        \"publishedDate\": \"2023-01-01\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"A new book\",\r\n  \"author\": \"Akash Jha\",\r\n  \"price\": 199.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"A new book\",\r\n  \"author\": \"Akash Jha\",\r\n  \"price\": 199.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"83-SQtFZ4S0rNtOXBaR4e4xGrd/NJs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 13:23:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1f4db00c-2aee-4568-bf1f-fe858d1c5c6d\",\n    \"title\": \"A new book\",\n    \"author\": \"Akash Jha\",\n    \"price\": 199.99,\n    \"publishedDate\": \"2023-01-01\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"A new modified book\",\r\n  \"author\": \"Akash T Jha\",\r\n  \"price\": 1990.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books/1f4db00c-2aee-4568-bf1f-fe858d1c5c6d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"1f4db00c-2aee-4568-bf1f-fe858d1c5c6d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"A new modified book\",\r\n  \"author\": \"Akash T Jha\",\r\n  \"price\": 1990.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/books/1f4db00c-2aee-4568-bf1f-fe858d1c5c6d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"1f4db00c-2aee-4568-bf1f-fe858d1c5c6d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-2sU+wH8LsO2HgYqDa0daGODIV30\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 13:26:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Modify book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"A new modified book\",\r\n  \"author\": \"Akash T Jha\",\r\n  \"price\": 1990.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books/0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"A new modified book\",\r\n  \"author\": \"Akash T Jha\",\r\n  \"price\": 1990.99,\r\n  \"publishedDate\": \"2023-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/books/0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								"0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8f-xxltBCY9TiaTTJhhakLuHcZn/2w\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 13:28:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i\",\n    \"title\": \"A new modified book\",\n    \"author\": \"Akash T Jha\",\n    \"price\": 1990.99,\n    \"publishedDate\": \"2023-01-01\"\n}"
+				}
+			]
+		}
+	]
+}
